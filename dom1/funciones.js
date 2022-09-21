@@ -2,6 +2,10 @@
 var titulo = document.createElement("h1");
 titulo.textContent = "Calculadora";
 document.body.appendChild(titulo);
+//var tdh1 = document.createElement("h1");
+titulo.align = "center";
+document.body.appendChild(titulo);
+
 
 var tabla = document.createElement("table");
 
@@ -25,12 +29,14 @@ document.getElementById("tablaPrincipal").style.borderColor = 'blanchedalmond';
 
 
 
+
 var input = document.createElement('input');
 input.type = "text";
 input.id = "resultado";
 input.value = "0";
 input.id = "resultado"
 td.appendChild(input);
+td.colSpan = "4";
 tabla.appendChild(tr);
 tr.appendChild(td);
 
@@ -60,6 +66,7 @@ var tr1 = document.createElement("tr");
 var input1 = document.createElement('input');
 input1.type = "button";
 input1.value = "1";
+input1.style.width = "100%";
 input1.onclick = onclick2;
 function onclick2() {
     var ent1 = document.getElementById('resultado').value; 
@@ -76,6 +83,7 @@ tr1.appendChild(td2);
 var input2 = document.createElement('input');
 input2.type = "button";
 input2.value = "2";
+input2.style.width = "100%";
 input2.onclick = onclick3;
 function onclick3() {
     var ent1 = document.getElementById('resultado').value; 
@@ -90,6 +98,7 @@ tr1.appendChild(td3);
 var input3 = document.createElement('input');
 input3.type = "button";
 input3.value = "3";
+input3.style.width = "100%";
 input3.onclick = onclick4;
 function onclick4() {
     var ent1 = document.getElementById('resultado').value; 
@@ -105,6 +114,7 @@ tr1.appendChild(tdmas);
 var inputmas = document.createElement('input');
 inputmas.type = "button";
 inputmas.value = "+";
+inputmas.style.width = "100%";
 inputmas.onclick = onclick5;
 function onclick5() {
     operacion('sumar'); return false;  
@@ -119,6 +129,7 @@ tr2.appendChild(td4);
 var input4 = document.createElement('input');
 input4.type = "button";
 input4.value = "4";
+input4.style.width = "100%";
 input4.onclick = onclick6;
 function onclick6() {
     var ent1 = document.getElementById('resultado').value; 
@@ -133,6 +144,7 @@ tr2.appendChild(td5);
 var input5 = document.createElement('input');
 input5.type = "button";
 input5.value = "5";
+input5.style.width = "100%";
 input5.onclick = onclick7;
 function onclick7() {
     var ent1 = document.getElementById('resultado').value; 
@@ -147,6 +159,7 @@ tr2.appendChild(td6);
 var input6 = document.createElement('input');
 input6.type = "button";
 input6.value = "6";
+input6.style.width = "100%";
 input6.onclick = onclick8;
 function onclick8() {
     var ent1 = document.getElementById('resultado').value; 
@@ -161,6 +174,7 @@ tr2.appendChild(tdmenos);
 var inputmenos = document.createElement('input');
 inputmenos.type = "button";
 inputmenos.value = "-";
+inputmenos.style.width = "100%";
 inputmenos.onclick = onclick9;
 function onclick9() {
     operacion('restar'); return false;
@@ -176,6 +190,7 @@ tr3.appendChild(td7);
 var input7 = document.createElement('input');
 input7.type = "button";
 input7.value = "7";
+input7.style.width = "100%";
 input7.onclick = onclick10;
 function onclick10() {
     var ent1 = document.getElementById('resultado').value; 
@@ -190,6 +205,7 @@ tr3.appendChild(td8);
 var input8 = document.createElement('input');
 input8.type = "button";
 input8.value = "8";
+input8.style.width = "100%";
 input8.onclick = onclick11;
 function onclick11() {
     var ent1 = document.getElementById('resultado').value; 
@@ -204,6 +220,7 @@ tr3.appendChild(td9);
 var input9 = document.createElement('input');
 input9.type = "button";
 input9.value = "9";
+input9.style.width = "100%";
 input9.onclick = onclick12;
 function onclick12() {
     var ent1 = document.getElementById('resultado').value; 
@@ -218,6 +235,7 @@ tr3.appendChild(tdx);
 var inputx = document.createElement('input');
 inputx.type = "button";
 inputx.value = "*";
+inputx.style.width = "100%";
 inputx.onclick = onclick13;
 function onclick13() {
     operacion('multiplicar'); return false;
@@ -233,6 +251,7 @@ tr4.appendChild(td0);
 var input0 = document.createElement('input');
 input0.type = "button";
 input0.value = "0";
+input0.style.width = "100%";
 input0.onclick = onclick14;
 function onclick14() {
     var ent1 = document.getElementById('resultado').value; 
@@ -240,6 +259,7 @@ function onclick14() {
                 var res = ent1.concat(ent2); 
                 document.getElementById('resultado').value=res;}
 }
+td0.colSpan = "2";
 td0.appendChild(input0);
 
 var tdpunto = document.createElement("td");
@@ -247,6 +267,7 @@ tr4.appendChild(tdpunto);
 var inputpunto = document.createElement('input');
 inputpunto.type = "button";
 inputpunto.value = ".";
+inputpunto.style.width = "100%";
 inputpunto.onclick = onclick15;
 function onclick15() {
     operacion('punto'); return false;
@@ -258,6 +279,7 @@ tr4.appendChild(tddiv);
 var inputdiv = document.createElement('input');
 inputdiv.type = "button";
 inputdiv.value = "/";
+inputdiv.style.width = "100%";
 inputdiv.onclick = onclick16;
 function onclick16() {
     operacion('dividir'); return false;
@@ -273,6 +295,7 @@ tr5.appendChild(tddel);
 var inputdel = document.createElement('input');
 inputdel.type = "button";
 inputdel.value = "Del";
+inputdel.style.width = "100%";
 inputdel.onclick = onclick17;
 function onclick17() {
     operacion('del'); return false;
@@ -284,6 +307,7 @@ tr5.appendChild(tdc);
 var inputc = document.createElement('input');
 inputc.type = "button";
 inputc.value = "C";
+inputc.style.width = "100%";
 inputc.onclick = onclick18;
 function onclick18() {
     operacion('reset'); return false;
@@ -295,10 +319,12 @@ tr5.appendChild(tdigual);
 var inputigual = document.createElement('input');
 inputigual.type = "button";
 inputigual.value = "=";
+inputigual.style.width = "100%";
 inputigual.onclick = onclick19;
 function onclick19() {
     operacion('igual'); return false;
 }
+tdigual.colSpan = "2";
 tdigual.appendChild(inputigual);
 
 
